@@ -20,11 +20,6 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1b2a,100:4361ee&height=3">
 
-<div align="center">
-
-**[Watch the Demo](../../issues)** &nbsp;•&nbsp; **[Report a Bug](../../issues)** &nbsp;•&nbsp; **[Request a Feature](../../issues)**
-
-</div>
 
 <br>
 
