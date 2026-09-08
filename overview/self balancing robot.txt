@@ -1,0 +1,43 @@
+About
+
+A two-wheeled robot that balances itself in real time and can switch between line following and obstacle avoidance using PID control.
+
+• Built a full self-balancing system from IMU sensing to motor output
+• Combined sensor readings with a complementary filter for stable angle tracking
+• Implemented a PID control loop tuned for the robot's weight and motor response
+• Added line following using an IR reflectance array
+• Added obstacle avoidance using dual ultrasonic sensors
+• Enabled mode switching with a single push button
+
+
+Problem
+
+Two-wheeled robots are naturally unstable and fall without constant correction. Most hobby robots handle only one behavior at a time, either balancing or driving, rarely both together. There was a need for a robot that could stay upright on its own while still reacting to its surroundings, whether that meant following a path or avoiding something in front of it.
+
+
+Objectives
+
+This project set out to build a robot that balances on its own and still behaves intelligently while moving. It focused on combining stable control with real time sensing in a single compact system.
+
+• Read tilt data from an IMU and filter it for stability
+• Build a PID loop to keep the robot upright
+• Add line following using reflectance sensors
+• Add obstacle detection using ultrasonic sensors
+• Let a single button switch between all driving modes
+• Keep the whole system running on one microcontroller
+
+
+Solution
+
+This project solves the problem with a self contained embedded control system. An MPU6050 IMU feeds tilt data into a complementary filter, which is fed into a PID loop that continuously adjusts motor output to keep the robot upright. On top of this balance loop, a mode layer reads either an IR array or dual ultrasonic sensors and biases the lean angle so the robot can follow a line or steer around obstacles without ever losing balance. A single push button cycles through all three modes, and everything runs directly on the microcontroller with no external computer needed.
+
+
+Results
+
+The robot balances reliably on two wheels and holds its position under normal disturbances, while still responding correctly in both autonomous driving modes.
+
+• Maintains stable balance during idle, line following, and obstacle avoidance
+• Follows a line accurately using the IR reflectance array
+• Detects and steers around obstacles using the ultrasonic sensors
+• Switches modes reliably with a single button press
+• Runs entirely standalone on the microcontroller with no external computer
